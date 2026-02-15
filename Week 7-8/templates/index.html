@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Energy - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>Energy Analytics Pro</h1>
+                <p style="color: var(--text-dim)">Smart Consumption Monitoring & ML Forecasting</p>
+            </div>
+            <button class="refresh-btn" onclick="refreshDashboard()">Refresh Data</button>
+        </header>
+
+        <div class="dashboard-grid">
+            <!-- Stats Section -->
+            <div class="card stat-card">
+                <h3>Total Consumption</h3>
+                <div id="total-consumption" class="stat-value">--</div>
+                <p style="color: var(--text-dim)">Cumulative kWh</p>
+            </div>
+            <div class="card stat-card">
+                <h3>Avg. Hourly Usage</h3>
+                <div id="avg-usage" class="stat-value">--</div>
+                <p style="color: var(--text-dim)">kWh per Hour</p>
+            </div>
+            <div class="card stat-card">
+                <h3>Next Hour Prediction</h3>
+                <div class="prediction-box">
+                    <div id="prediction-value" class="stat-value" style="color: var(--accent)">Calculating...</div>
+                    <p style="color: var(--text-dim); margin-bottom: 0;">Predicted Demand (kWh)</p>
+                </div>
+            </div>
+
+            <!-- Main Charts -->
+            <div class="card interactive-chart-card wide">
+                <h3>Hourly Consumption Trend (Live)</h3>
+                <div class="chart-wrapper">
+                    <canvas id="hourlyChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card interactive-chart-card">
+                <h3>Device Energy Mix</h3>
+                <div class="chart-wrapper">
+                    <canvas id="deviceChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card interactive-chart-card wide">
+                <h3>Daily Consumption (7-Day Trend)</h3>
+                <div class="chart-wrapper">
+                    <canvas id="dailyChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Smart Suggestions Section -->
+            <div class="card suggestions-card">
+                <h3>Smart Efficiency Tips</h3>
+                <div id="suggestions-container">
+                    <!-- Suggestions will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
