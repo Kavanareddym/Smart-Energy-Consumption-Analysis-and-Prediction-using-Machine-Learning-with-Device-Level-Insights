@@ -13,6 +13,10 @@
     --glass-surface: rgba(255, 255, 255, 0.03);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -347,10 +351,16 @@ h1 {
     background: #1e293b;
     padding: 2.5rem;
     border-radius: 1.5rem;
-    width: 100%;
-    max-width: 500px;
+    width: 90%;
+    max-width: 850px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
 .modal-content h2 {

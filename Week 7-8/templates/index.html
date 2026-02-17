@@ -20,8 +20,6 @@
             </div>
             <div class="header-controls">
                 <button class="profile-btn" onclick="openProfile()">Profile</button>
-                <button class="logout-btn" onclick="handleLogout()">Logout</button>
-                <button class="refresh-btn" onclick="refreshDashboard()">Refresh</button>
             </div>
         </header>
 
@@ -117,19 +115,21 @@
             <h2>Welcome to Smart Energy Advisor ⚡</h2>
             <p>Let's personalize your experience. Tell us a bit about your home.</p>
             <form id="onboarding-form">
-                <div class="form-group">
-                    <label>Home Name</label>
-                    <input type="text" name="name" placeholder="E.g. My Apartment" required>
-                </div>
-                <div class="form-group">
-                    <label for="home_id">Assigned Home Profile (Select to see different data)</label>
-                    <select id="home_id" name="home_id" required>
-                        <option value="399">Profile 399 (Urban Apartment)</option>
-                        <option value="378">Profile 378 (Suburban Home)</option>
-                        <option value="421">Profile 421 (Smart House)</option>
-                        <option value="204">Profile 204 (Eco-Cottage)</option>
-                        <option value="132">Profile 132 (Large Estate)</option>
-                    </select>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Home Name</label>
+                        <input type="text" name="name" placeholder="E.g. My Apartment" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="home_id">Assigned Home Profile</label>
+                        <select id="home_id" name="home_id" required>
+                            <option value="399">Profile 399 (Urban Apartment)</option>
+                            <option value="378">Profile 378 (Suburban Home)</option>
+                            <option value="421">Profile 421 (Smart House)</option>
+                            <option value="204">Profile 204 (Eco-Cottage)</option>
+                            <option value="132">Profile 132 (Large Estate)</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="form-grid">
@@ -142,24 +142,26 @@
                         <input type="number" name="residents" value="3">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label>Energy Goal</label>
-                    <select name="goal">
-                        <option value="Reduce bill">Reduce bill</option>
-                        <option value="Reduce carbon footprint">Reduce carbon footprint</option>
-                        <option value="Avoid peak charges">Avoid peak charges</option>
-                        <option value="General monitoring">General monitoring</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Lifestyle Pattern (Mostly at home during?)</label>
-                    <select name="lifestyle_pattern">
-                        <option value="Morning">Morning</option>
-                        <option value="Afternoon">Afternoon</option>
-                        <option value="Evening">Evening</option>
-                        <option value="Night">Night</option>
-                        <option value="Mostly at Home">Mostly at Home</option>
-                    </select>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Energy Goal</label>
+                        <select name="goal">
+                            <option value="Reduce bill">Reduce bill</option>
+                            <option value="Reduce carbon footprint">Reduce carbon footprint</option>
+                            <option value="Avoid peak charges">Avoid peak charges</option>
+                            <option value="General monitoring">General monitoring</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Lifestyle Pattern (Mostly at home during?)</label>
+                        <select name="lifestyle_pattern">
+                            <option value="Morning">Morning</option>
+                            <option value="Afternoon">Afternoon</option>
+                            <option value="Evening">Evening</option>
+                            <option value="Night">Night</option>
+                            <option value="Mostly at Home">Mostly at Home</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Tariff Type</label>

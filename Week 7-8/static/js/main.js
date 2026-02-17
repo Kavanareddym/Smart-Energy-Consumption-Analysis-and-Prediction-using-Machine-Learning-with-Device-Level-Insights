@@ -169,20 +169,6 @@ async function openProfile() {
     }
 }
 
-async function handleLogout() {
-    if (confirm("Logout of your profile? Submitting the form again will assign a new home profile.")) {
-        try {
-            const response = await fetch('/api/logout', { method: 'POST' });
-            const result = await response.json();
-            if (result.status === 'success') {
-                // Hard reload to reset all states and show onboarding
-                window.location.reload();
-            }
-        } catch (error) {
-            console.error('Error logging out:', error);
-        }
-    }
-}
 
 async function fetchPrediction() {
     try {
@@ -270,12 +256,9 @@ function handleOnboarding(e) {
         .catch(err => console.error("Onboarding failed:", err));
 }
 
-function refreshDashboard() {
-    fetchPersonalizedData();
-}
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('onboarding-form');
     if (form) form.addEventListener('submit', handleOnboarding);
-    refreshDashboard();
+    fetchPersonalizedData();
 });
