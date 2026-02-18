@@ -6,14 +6,14 @@ A comprehensive machine learning project designed to analyze appliance-level ene
 This repository contains the full development cycle of a Smart Energy Advisor, from initial data exploration and preprocessing to a sophisticated, real-time dashboard powered by machine learning (LSTM).
 
 ### Key Features
-- ** Advanced Analytics**: Insights into daily, hourly, and device-level energy usage.
-- ** ML Demand Forecasting**: Uses a Deep Learning (LSTM) model to predict the next hour's energy consumption with high accuracy.
-- ** Goal-Driven Advisor**: Tailored energy-saving suggestions based on user goals:
+- **Advanced Analytics**: Insights into daily, hourly, and device-level energy usage.
+- **ML Demand Forecasting**: Uses a Deep Learning (LSTM) model to predict the next hour's energy consumption with high accuracy.
+- **Goal-Driven Advisor**: Tailored energy-saving suggestions based on user goals:
   - **Reduce Bills**: Practical tips to lower monthly electricity costs.
   - **Carbon Footprint**: Environmental impact tracking and CO2 reduction advice.
   - **Avoid Peak Charges**: Load-shifting strategies for time-of-use tariffs.
   - **General Monitoring**: Overall system health and efficiency scores.
-- ** Premium Dashboard**: A stunning, glassmorphism-inspired UI with interactive charts and real-time alerts.
+- **Premium Dashboard**: A stunning, glassmorphism-inspired UI with interactive charts and real-time alerts.
 
 ## 🛠 Tech Stack
 - **Backend**: Python, Flask
