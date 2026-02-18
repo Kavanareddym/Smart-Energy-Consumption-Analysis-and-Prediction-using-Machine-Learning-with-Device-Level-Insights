@@ -9,8 +9,10 @@ This module provides an interactive web dashboard for monitoring energy consumpt
     - Hourly energy consumption trends.
     - Daily consumption for the last 7 days.
     - Device-wise energy distribution (Pie chart).
-- **Smart Suggestions**: AI-driven tips for improving energy efficiency.
-- **Modern UI**: Dark-themed, responsive dashboard with glassmorphism aesthetics.
+- **Goal-Driven Smart Energy Advisor**: Personalized suggestions based on four distinct goals: Reduce Bills, Reduce Carbon Footprint, Avoid Peak Charges, and General Monitoring.
+- **LSTM Prediction**: Real-time energy consumption forecasting for the next hour.
+- **Premium Glassmorphism UI**: High-impact, interactive dashboard with crystal-clear visual aesthetics and micro-animations.
+- **Dynamic Insight Engine**: Behavioral alerts and context-aware energy-saving tips based on device-level usage.
 
 ## Project Structure
 - `app.py`: Main Flask application.
